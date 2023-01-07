@@ -5,38 +5,54 @@
 Kábelezés:
 
 Talajnedvesség szenzor
+
 szenzor		Arduino
 VCC	---	5V
 GND	---	GND
 AOUT	---	A0 (Analog 0)
 
+
+
 DHT szenzor (Hő és pára)
+
 szenzor		Arduino
 VCC	---	5V
 GND	---	GND
 Digital	---	D2 (Digital 2)
 
+
+
 Felszín nedvesség szenzor
+
 szenzor		Arduino
 VCC	---	5V
 GND	---	GND
 D0	---	D4
 A0	---	A1
 
+
+
 LCD panel 4x20
+
 szenzor		Arduino
 VCC	---	5V
 GND	---	GND
 SDA	---	SDA
 SCL	---	SCL
 
+
+
 Vízpumpa relé
+
 Relé		Arduino
 VCC (+)	---	5V
 GND (-)	---	GND
 S	---	D9
 
+
+
 ESP-01S wifi modul (használat közben)
+
 ESP-01S		Arduino
 3v3	---	3.3V	(FONTOS!!!!!! MEGHIBÁSODHAT HA 5V-ra kötjük)
 RST	---	
@@ -46,6 +62,8 @@ RX	---	TX (D1 uno modellen)
 IO0	---	
 IO2	---	
 GND	---	GND
+
+
 
 
 
