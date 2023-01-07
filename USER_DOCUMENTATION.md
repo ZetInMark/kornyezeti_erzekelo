@@ -1,156 +1,56 @@
------Felhasználói dokumentáció----
-
-1) A mikrokontroller és a szenzorok közötti kapcsolat kiépítése
-
-Kábelezés:
-
-Talajnedvesség szenzor
-
-szenzor		Arduino
-
-VCC	---	5V
-
-GND	---	GND
-
-AOUT	---	A0 (Analog 0)
-.
-.
-.
-.
-.
-
-
-
-DHT szenzor (Hő és pára)
-
-szenzor		Arduino
-
-VCC	---	5V
-
-GND	---	GND
-
-Digital	---	D2 (Digital 2)
-
-.
-.
-.
-.
-.
-
-
-
-
-
-
-Felszín nedvesség szenzor
-
-szenzor		Arduino
-
-VCC	---	5V
-
-GND	---	GND
-
-D0	---	D4
-
-A0	---	A1
-
-
-.
-.
-.
-.
-.
-
-
-
-
-
-LCD panel 4x20
-
-szenzor		Arduino
-
-VCC	---	5V
-
-GND	---	GND
-
-SDA	---	SDA
-
-SCL	---	SCL
-
-.
-.
-.
-.
-.
-
-
-
-
-
-
-
-Vízpumpa relé
-
-Relé		Arduino
-
-VCC (+)	---	5V
-
-GND (-)	---	GND
-
-S	---	D9
-
-.
-.
-.
-.
-.
-
-
-
-
-
-
-ESP-01S wifi modul (használat közben)
-
-ESP-01S		Arduino
-
-3v3	---	3.3V	(FONTOS!!!!!! MEGHIBÁSODHAT HA 5V-ra kötjük)
-
-RST	---	
-
-EN	---	3.3V
-
-TX	---	RX (D0 uno modellen)
-
-RX	---	TX (D1 uno modellen)
-
-IO0	---	
-
-IO2	---	
-
-GND	---	GND
-
-
-
-.
-.
-.
-.
-.
-
-
-
-
-
-
-2) Használat
-Létre kell hozni a https://twitter.com/ oldalon egy új fiókot
-Létre kell hozni az https://ifttt.com/ oldalon egy webhookot, amit megfelelő módon be kell konfigurálni úgy hogy tweeteljen html kérés esetén
-Tutorial: https://ifttt.com/connect/maker_webhooks/twitter
-
-Helyes összekötés esetén az 'esp-01s' mappában található esp_01s.ino fájlban át kell írni
-a webhook kulcs, valamint a csatlakozni kívánt hálózatnak a jelszavát valamint a hálózati SSD-t meg kell adni.
-
-Ha mindent jól kötöttünk össze, az esp_01s.ino file aján található delay-el csökkenthetjük illetve növelhetjük az időtartamot amilyen időközzel működjön a webhook
-
-(megjegyzés: az iftt-s webhook-ok egy nap 25x futtathatók le)
+<!-- #######  HEY, I AM THE SOURCE EDITOR! #########-->
+<h1 style="color: #5e9ca0;">-----Felhaszn&aacute;l&oacute;i dokument&aacute;ci&oacute;----</h1>
+<h2 style="color: #2e6c80;">1) A mikrokontroller &eacute;s a szenzorok k&ouml;z&ouml;tti kapcsolat ki&eacute;p&iacute;t&eacute;se</h2>
+<p>K&aacute;belez&eacute;s:</p>
+<p><br />Talajnedvess&eacute;g szenzor</p>
+<p>szenzor Arduino</p>
+<p>VCC --- 5V</p>
+<p>GND --- GND</p>
+<p>AOUT --- A0 (Analog 0)</p>
+<p>&nbsp;</p>
+<p>DHT szenzor (Hő &eacute;s p&aacute;ra)</p>
+<p>szenzor Arduino</p>
+<p>VCC --- 5V</p>
+<p>GND --- GND</p>
+<p>Digital --- D2 (Digital 2)</p>
+<p>&nbsp;</p>
+<p>Felsz&iacute;n nedvess&eacute;g szenzor</p>
+<p>szenzor Arduino</p>
+<p>VCC --- 5V</p>
+<p>GND --- GND</p>
+<p>D0 --- D4</p>
+<p>A0 --- A1</p>
+<p>&nbsp;</p>
+<p>LCD panel 4x20</p>
+<p>szenzor Arduino</p>
+<p>VCC --- 5V</p>
+<p>GND --- GND</p>
+<p>SDA --- SDA</p>
+<p>SCL --- SCL</p>
+<p>&nbsp;</p>
+<p>V&iacute;zpumpa rel&eacute;</p>
+<p>Rel&eacute; Arduino</p>
+<p>VCC (+) --- 5V</p>
+<p>GND (-) --- GND</p>
+<p>S --- D9</p>
+<p>&nbsp;</p>
+<p>ESP-01S wifi modul (haszn&aacute;lat k&ouml;zben)</p>
+<p>ESP-01S Arduino</p>
+<p>3v3 --- 3.3V (FONTOS!!!!!! MEGHIB&Aacute;SODHAT HA 5V-ra k&ouml;tj&uuml;k)</p>
+<p>RST ---</p>
+<p>EN --- 3.3V</p>
+<p>TX --- RX (D0 uno modellen)</p>
+<p>RX --- TX (D1 uno modellen)</p>
+<p>IO0 ---</p>
+<p>IO2 ---</p>
+<p>GND --- GND</p>
+<p>&nbsp;</p>
+<h2 style="color: #2e6c80;">2) Haszn&aacute;lat</h2>
+<p>L&eacute;tre kell hozni a https://twitter.com/ oldalon egy &uacute;j fi&oacute;kot<br />L&eacute;tre kell hozni az https://ifttt.com/ oldalon egy webhookot, amit megfelelő m&oacute;don be kell konfigur&aacute;lni &uacute;gy hogy tweeteljen html k&eacute;r&eacute;s eset&eacute;n<br />Tutorial: https://ifttt.com/connect/maker_webhooks/twitter</p>
+<p>Helyes &ouml;sszek&ouml;t&eacute;s eset&eacute;n az 'esp-01s' mapp&aacute;ban tal&aacute;lhat&oacute; esp_01s.ino f&aacute;jlban &aacute;t kell &iacute;rni<br />a webhook kulcs, valamint a csatlakozni k&iacute;v&aacute;nt h&aacute;l&oacute;zatnak a jelszav&aacute;t valamint a h&aacute;l&oacute;zati SSD-t meg kell adni.</p>
+<p>Az esp_01s.ino file aj&aacute;n tal&aacute;lhat&oacute; delay-el cs&ouml;kkenthetj&uuml;k illetve n&ouml;velhetj&uuml;k az időtartamot amilyen idők&ouml;zzel műk&ouml;dj&ouml;n a webhook.</p>
+<p>Sz&uacute;rjuk a talajnedvess&eacute;g szenzort vir&aacute;gf&ouml;ldbe.</p>
+<p>A v&iacute;zpump&aacute;t ne haszn&aacute;ljuk &uuml;resen t&ouml;lts&uuml;nk bele vizet.</p>
+<p>Ha mindent j&oacute;l k&ouml;t&ouml;tt&uuml;nk &ouml;ssze a megadott időtartam lej&aacute;rat&aacute;val meg is fognak jelenni a tweetek, a v&iacute;zmpumpa a megadott talajnedvess&eacute;g szint alatt műk&ouml;dni fog, valamint az LCD panel folyamatos &eacute;rtes&iacute;t&eacute;st ny&uacute;jt nek&uuml;nk a m&eacute;r&eacute;sekről.</p>
+<p>(megjegyz&eacute;s: az iftt-s webhook-ok egy nap 25x futtathat&oacute;k le)</p>
+<p>&nbsp;</p>
