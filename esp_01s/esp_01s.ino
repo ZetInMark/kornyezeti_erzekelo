@@ -20,7 +20,20 @@ unsigned long minutes = seconds * 180; //3 perc varakozasi ido, ez a long kell m
 
 
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(9600);
+
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
+  WiFi.mode(WIFI_STA);
+  WiFi.disconnect();
+  delay(1000);
+
+  //kapcsolódás a hálózathoz
+  WiFi.begin(_SSID, _PASSWORD);
+
+
+
+  digitalWrite(LED_BUILTIN, HIGH);
 
 }
 
