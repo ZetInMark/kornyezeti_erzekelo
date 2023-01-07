@@ -25,6 +25,7 @@
 <p>ISO0 --- GND</p>
 <p>ISO2 ---</p>
 <p>GND --- GND</p>
+<p>Fel kell t&ouml;lteni elősz&ouml;r az arduino-ra a felprogramozo_arduinora.ino filet, ezut&aacute;n engedni fogja az tx-rx l&aacute;bakon a felt&ouml;lt&eacute;st az esp modulra.</p>
 <p>A sorrend pedig az hogy be kell dugni elősz&ouml;r a GND-be az ISO0 pint, elkezd&uuml;nk fel&ouml;lteni, &eacute;s amikor connecting..... &aacute;llapotban van az eszk&ouml;z, 0.5 m&aacute;sodpercre be kell dugni a GND-be az EN pint &eacute;s gyorsan kih&uacute;zni, ezt a l&eacute;p&eacute;st lehet k&eacute;tszer is meg kell ism&eacute;telni, ezut&aacute;n l&aacute;tni fogjuk hogy elkezd&uuml;nk &iacute;rni az esp eszk&ouml;z mem&oacute;riac&iacute;meire.</p>
 <p>Az &aacute;ltal&aacute;nos param&eacute;teres &aacute;t&iacute;r&aacute;sokat a felhaszn&aacute;l&oacute;i dokument&aacute;ci&oacute; tartalmazza (SSD, password, webhook_key).</p>
 <p>&nbsp;</p>
