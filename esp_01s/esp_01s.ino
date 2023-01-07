@@ -11,17 +11,16 @@ Webhook webhook(KEY, EVENT);    // Create an object.
 const unsigned int MAX_UZENET_HOSSZ = 17;
 static char uzenet[MAX_UZENET_HOSSZ];
 
-char strings[3]; // elemek száma amit át szeretnék adni a webhooknak
-charptr = NULL;
+char *strings[3]; // elemek száma amit át szeretnék adni a webhooknak
+char *ptr = NULL;
 
 unsigned long seconds = 1000L;
 unsigned long minutes = seconds * 180; //3 perc varakozasi ido, ez a long kell mivel az int az csak 32000 milisecondig megy
-
-
-
 void setup() {
-  Serial.begin(9600);
 
+  
+  Serial.begin(9600);
+  
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LOW);
   WiFi.mode(WIFI_STA);
@@ -35,10 +34,13 @@ void setup() {
 
   digitalWrite(LED_BUILTIN, HIGH);
 
+
+  
 }
 
 void loop() {
-  while(Serial.available() > 0) //ha vannak byteok a bufferben akkor....
+  
+ while(Serial.available() > 0) //ha vannak byteok a bufferben akkor....
   {
     //Helyet csinálunk az érkező üzenetnek
     //egy karakter tömböt hozunk létre amiben majd tároljuk az egyes karaktereket
@@ -62,10 +64,10 @@ void loop() {
       //adjunk egy null karaktert a stringnek
       uzenet[uzenet_poz] = '\0';  //ez fontos mivel ha atoi() átalakító használunk ez kell a végére
 
-      //Írjuk ki az üzenetet vagy csináljunk vele amit szeretnénk
+      //Írjuk ki az üzenetet vagy csináljunk vele amit szeretnénk      
+  
 
-
-
+      
       byte index = 0;
       ptr = strtok(uzenet, ",");  // szeparátor karakter
       while (ptr != NULL)
@@ -74,22 +76,25 @@ void loop() {
         index++;
         ptr = strtok(NULL, ",");
       }
-
+      
       String paratartalom = strings[0];
       String homerseklet = strings[1];
       String talajnedv = strings[2];
-
+      
 
       //átadjuk a webhooknak ami elküldi a http kérést
       webhook.trigger(paratartalom,homerseklet,talajnedv);
-
-
+       
+      
       //reseteljuk az uzenet poziciot
-
+      
       uzenet_poz = 0;
-}
-
+      digitalWrite(LED_BUILTIN, LOW);
+      delay(minutes); 
+       
+    }
+     
   }
-
-
+     
+      
 }
