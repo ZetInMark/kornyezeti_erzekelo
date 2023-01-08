@@ -69,7 +69,7 @@ void loop() {
 
       
       byte index = 0;
-      ptr = strtok(uzenet, ",");  // szeparátor karakter
+      ptr = strtok(uzenet, ",");  // szeparátor karakte r
       while (ptr != NULL)
       {
         strings[index] = ptr;
